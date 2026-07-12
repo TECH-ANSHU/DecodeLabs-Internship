@@ -151,7 +151,7 @@ graph TD
 Let's connect! I am actively looking for Data Analyst, BI Analyst, and Data Quality Engineering opportunities.
 
 [![GitHub Profile](https://img.shields.io/badge/GitHub-TECH--ANSHU-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TECH-ANSHU)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anshu_Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/anshu-kumar-data-analyst) <!-- Replace/adjust with your exact LinkedIn handle -->
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anshuman_Polai-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/anshumanpolai-cyber/]) <!-- Replace/adjust with your exact LinkedIn handle -->
 
 ---
 
