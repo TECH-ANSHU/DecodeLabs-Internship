@@ -148,10 +148,23 @@ graph TD
 
 ## 📬 Contact & Networks
 
-Let's connect! I am actively looking for Data Analyst, BI Analyst, and Data Quality Engineering opportunities.
+Let's connect! I'm passionate about Data Analytics, Python, and building real-world solutions through the DecodeLabs Data Analytics Internship. Feel free to connect, collaborate, or explore my work.
 
-[![GitHub Profile](https://img.shields.io/badge/GitHub-TECH--ANSHU-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TECH-ANSHU)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anshuman_Polai-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)]([https://www.linkedin.com/in/anshumanpolai-cyber/]) <!-- Replace/adjust with your exact LinkedIn handle -->
+<p align="center">
+
+<a href="https://github.com/TECH-ANSHU">
+<img src="https://img.shields.io/badge/GitHub-TECH--ANSHU-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/in/anshumanpolai-cyber/">
+<img src="https://img.shields.io/badge/LinkedIn-Anshuman%20Polai-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="mailto:anshumanpolai@gmail.com">
+<img src="https://img.shields.io/badge/Email-anshumanpolai%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+</p>
 
 ---
 
