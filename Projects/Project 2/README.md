@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # Advanced E-Commerce Transactions Data Quality Audit & Exploratory Analysis
 
 <p align="center">
@@ -20,11 +22,13 @@ This project focuses on executing an end-to-end data auditing, cleaning, feature
 ## 💼 Business Problem & Objectives
 
 During initial system profiling, the platform's transactional data was found to contain critical logic errors:
+
 1. **Discount Calculation Defect**: The system recorded the gross total price ($Quantity \times UnitPrice$) without deducting coupon codes (e.g., `SAVE10`, `WINTER15`), leading to over-reported revenue.
 2. **Logistics Integrity Defect**: Every pending or cancelled order was pre-assigned a logistics tracking number, violating standard supply chain workflows.
 3. **Product SKU Pricing Anomaly**: High-value products (Laptops, Phones) display identical unit price distributions (ranging uniformly from Rs. 11 to Rs. 700) to low-value office furniture (Chairs, Desks), indicating synthetic pricing.
 
-### Project Objectives:
+### Project Objectives
+
 * Build an automated Python ETL pipeline to programmatically clean and validate transaction data.
 * Correct the accounting bugs mathematically to establish an audited baseline.
 * Enforce shipping constraints to align tracking states with fulfillment statuses.
@@ -36,6 +40,7 @@ During initial system profiling, the platform's transactional data was found to 
 ## 📊 Dataset Specifications
 
 The raw transaction data (`Dataset for Data Analytics.xlsx`) contains 1,200 records with 14 attributes:
+
 * **`OrderID` / `TrackingNumber`**: Primary and candidate keys for logistical tracking.
 * **`Date`**: Purchase timestamps spanning January 2023 – June 2025.
 * **`Product` / `Quantity` / `UnitPrice`**: SKU categories (Monitor, Phone, Tablet, etc.), item volumes, and prices.
@@ -78,6 +83,7 @@ flowchart TD
 ## 🧹 Data Auditing & Cleaning Methodology
 
 ### 1. Mathematical Accounting Correction
+
 The gross invoice price calculation did not apply coupon savings. The pipeline maps promo campaigns to numerical multipliers and recomputes the field:
 
 $$\text{TotalPrice}_{\text{audited}} = \text{Quantity} \times \text{UnitPrice} \times \left(1.0 - \frac{\text{DiscountPercent}}{100.0}\right)$$
@@ -87,6 +93,7 @@ $$\text{TotalPrice}_{\text{audited}} = \text{Quantity} \times \text{UnitPrice} \
 * Unmatched/Null codes $\to$ **0% discount** (`0.00` multiplier)
 
 ### 2. Supply Chain Validation Rule
+
 Logistics numbers are only generated for active fulfillment phases (`Shipped`, `Delivered`, `Returned`). The pipeline sets `TrackingNumber` to null (`NaN`) for all `Pending` or `Cancelled` orders, preserving shipping records while maintaining compliance.
 
 ---
@@ -96,8 +103,10 @@ Logistics numbers are only generated for active fulfillment phases (`Shipped`, `
 The following plots were generated and output by the ETL visualization module (`src/eda_analysis.py`):
 
 ### 1. Product Volume & Revenue Performance
+
 * **Product Sales Volume**: Shows Chairs (178) and Printers (181) leading in total order counts.
 * **Product Total Revenue**: Chairs represent the largest gross revenue channel (Rs. 185.3K), followed closely by Printers (Rs. 183.5K) and Laptops (Rs. 181.1K).
+
 <p align="center">
   <img src="images/05_univariate_products.png" width="45%" alt="Product Sales Volume"/>
   <img src="images/12_bivariate_product_revenue.png" width="45%" alt="Revenue by Product"/>
@@ -106,8 +115,10 @@ The following plots were generated and output by the ETL visualization module (`
 ---
 
 ### 2. Order Fulfillment & Seasonality Trends
+
 * **Fulfillment States**: A critical donut chart highlighting that 20.8% of transactions are cancelled and 20.6% are returned.
 * **Monthly Sales Seasonality**: Continuous lines tracking sales peaks during summer and winter quarters, reflecting consumer buying cycles.
+
 <p align="center">
   <img src="images/06_univariate_status.png" width="45%" alt="Order Status Distribution"/>
   <img src="images/13_bivariate_monthly_revenue.png" width="45%" alt="Seasonality Trends"/>
@@ -116,7 +127,9 @@ The following plots were generated and output by the ETL visualization module (`
 ---
 
 ### 3. Customer Acquisition Efficiency
+
 * **Channel ROI**: Highlights Instagram as the highest revenue driver (Rs. 237.4k), with Email running a close second (Rs. 222.0k).
+
 <p align="center">
   <img src="images/10_bivariate_referral_revenue.png" width="60%" alt="Revenue by Acquisition Channel"/>
 </p>
@@ -141,29 +154,37 @@ The following plots were generated and output by the ETL visualization module (`
 ## 🚀 Installation & Replication Guide
 
 ### 1. Prerequisites
+
 Verify that Python 3.8+ is installed:
+
 ```bash
 python --version
 ```
 
 ### 2. Environment Setup
+
 Clone the repository, navigate to this project folder, and install the required dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Execution Pipeline
+
 Run the data cleaning script to correct invoice totals and format values:
+
 ```bash
 python src/clean_data.py
 ```
 
 Run the validation suite to assert clean dataset rules:
+
 ```bash
 python src/validate_cleaned_data.py
 ```
 
 Run the analysis script to generate new visualization plots:
+
 ```bash
 python src/eda_analysis.py
 ```
@@ -171,6 +192,7 @@ python src/eda_analysis.py
 ---
 
 ## 📈 Expected Output Logs
+
 ```text
 >>> python src/validate_cleaned_data.py
 === STARTING QA DATA VALIDATION CHECKS ===
@@ -189,12 +211,14 @@ VALIDATION COMPLETE: Dataset is 100% compliant with business rules!
 ---
 
 ## 🔮 Future Improvements
+
 * Deploy an interactive dashboard using Streamlit to allow dynamic slicing by product category, date range, and referral source.
 * Integrate predictive models (such as logistic regression) to assess return/cancellation risk at the checkout phase based on shipping address and payment method.
 
 ---
 
 ## 🏆 Skills Demonstrated
+
 * **ETL & Data Engineering**: Structured Python pipeline modules.
 * **Data Auditing & QA**: Automated assertion checks for data cleanliness.
 * **Exploratory Data Analysis**: Continuous time-series and categorical visualization.
@@ -203,5 +227,6 @@ VALIDATION COMPLETE: Dataset is 100% compliant with business rules!
 ---
 
 ## 📄 License & References
+
 * This project is licensed under the MIT License - see the root [LICENSE](../../LICENSE) for details.
 * Dataset supplied by **DecodeLabs** for Data Analyst Interns.
