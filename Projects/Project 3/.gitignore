@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Data and Databases (excluding raw datasets in Excel form if needed, but DBs and CSVs must be excluded)
+*.db
+*.csv
+data/processed/
+
+# Environments and configs
+.env
+.venv/
+env/
+venv/
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
