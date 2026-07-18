@@ -67,8 +67,15 @@ DecodeLabs-Internship/
 │   │   ├── Executive_Summary.md        # C-level briefing summary
 │   │   ├── Business_Recommendations.md # Actionable recommendations
 │   │   └── Final_Business_Report.md    # 12-phase consulting report
-│   ├── Project 3/                      # Upcoming Project Placeholder
-│   │   └── README.md
+│   ├── Project 3/                      # SQL BI Dashboard Engine (Completed)
+│   │   ├── README.md                   # Independent Project 3 documentation
+│   │   ├── data/                       # Raw and processed datasets
+│   │   ├── src/                        # Modular Python source scripts
+│   │   ├── images/                     # Generated visualization plots
+│   │   ├── screenshots/                # Application output screenshots
+│   │   ├── requirements.txt            # Project-specific Python dependencies
+│   │   ├── Project_Report.pdf          # 9-Page compiled Executive PDF Report
+│   │   └── query_insights_report.md    # Detailed 46 SQL queries & insights report
 │   └── Project 4/                      # Upcoming Project Placeholder
 │       └── README.md
 ├── Assets/                             # Repository branding and assets
@@ -90,7 +97,7 @@ Below is the master navigation index. Each project folder contains its own indep
 | :---: | :--- | :--- | :--- | :---: | :---: |
 | **01** | **E-Commerce Data Quality Audit & EDA** | Auditing e-commerce financial records to correct calculation bugs (discount leakage) and analyzing acquisition/revenue trends. | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat&logo=python&logoColor=white) | `Completed` | [**View Project 📂**](./Projects/Project%201) |
 | **02** | **Advanced E-Commerce EDA** | Building upon the quality audit, conducting deep multivariate analysis, answering 25 business questions, and drafting C-level reports. | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat&logo=python&logoColor=white) | `Completed` | [**View Project 📂**](./Projects/Project%202) |
-| **03** | **Project 3 (Coming Soon)** | Upcoming analytical case study modeled on product/logistics optimization. | ![TBD](https://img.shields.io/badge/TBD-Slate?style=flat) | `In Queue` | [**Coming Soon 🔒**](./Projects/Project%203) |
+| **03** | **SQL Data Analysis & BI Dashboard** | Building an automated pipeline to clean raw transactions, setup an indexed SQLite database, run 46 SQL queries, plot 10 charts, and compile a PDF report. | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat&logo=python&logoColor=white) | `Completed` | [**View Project 📂**](./Projects/Project%203) |
 | **04** | **Project 4 (Coming Soon)** | Final internship project focused on predictive modeling or KPI dashboards. | ![TBD](https://img.shields.io/badge/TBD-Slate?style=flat) | `In Queue` | [**Coming Soon 🔒**](./Projects/Project%204) |
 
 ---
@@ -149,7 +156,7 @@ graph TD
 
 * **Milestone 1**: Project 1 (E-Commerce Quality Audit & EDA) — **Completed** (July 2026)
 * **Milestone 2**: Project 2 (Advanced E-Commerce EDA) — **Completed** (July 2026)
-* **Milestone 3**: Project 3 (To Be Announced) — **In Queue**
+* **Milestone 3**: Project 3 (SQL Data Analysis & BI Dashboard) — **Completed** (July 2026)
 * **Milestone 4**: Project 4 (Final Case Study & Certification) — **In Queue**
 
 ---
